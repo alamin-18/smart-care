@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Appointment Cancelled</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f8f9fa; padding: 20px;">
+    <div style="max-width: 600px; margin: auto; background: #fff; border-radius: 8px; padding: 20px; border: 1px solid #ddd;">
+        <h2 style="color: #c0392b;">Appointment Cancelled</h2>
+
+        <p>Dear {{ patient_name }},</p>
+        <p>We regret to inform you that your appointment with <b>Dr. {{ doctor_name }}</b> has been cancelled.</p>
+
+        <p><b>Appointment Details:</b></p>
+        <ul>
+            <li>Date: {{ appointment_date }}</li>
+            <li>Time: {{ appointment_time }}</li>
+        </ul>
+
+        <p>We apologize for the inconvenience. Please reschedule at your convenience.</p>
+
+        <p style="margin-top: 30px;">Best regards,<br>Smart Care Team</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Your Online Appointment</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f8f9fa; padding: 20px;">
+    <div style="max-width: 600px; margin: auto; background: #fff; border-radius: 8px; padding: 20px; border: 1px solid #ddd;">
+        <h2 style="color: #27ae60;">Your Online Appointment is Starting</h2>
+
+        <p>Dear {{ patient_name }},</p>
+        <p>Your online appointment with <b>Dr. {{ doctor_name }}</b> is scheduled to begin soon.</p>
+
+        <p><b>Appointment Details:</b></p>
+        <ul>
+            <li>Date: {{ appointment_date }}</li>
+            <li>Time: {{ appointment_time }}</li>
+        </ul>
+
+        <p style="text-align: center; margin: 30px 0;">
+            <a href="{{ meet_link }}" 
+               style="background: #27ae60; color: #fff; text-decoration: none; padding: 12px 25px; border-radius: 5px; font-weight: bold;">
+                Join Appointment
+            </a>
+        </p>
+
+        <p>If the button doesn’t work, copy and paste this link into your browser:</p>
+        <p style="word-break: break-all; color: #27ae60;">{{ meet_link }}</p>
+
+        <p style="margin-top: 30px;">Best regards,<br>Smart Care Team</p>
+    </div>
+</body>
+</html>
