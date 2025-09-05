@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+     'corsheaders',
     'rest_framework',
     'doctor',
     'patient',
@@ -56,6 +57,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",   # add this at the top
+    "django.middleware.common.CommonMiddleware",
 ]
 
 ROOT_URLCONF = 'smart_care.urls'
@@ -128,6 +131,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",   # Vite dev server
+    "http://127.0.0.1:5173",   # sometimes needed too
+]
 
 
 # Default primary key field type

@@ -10,4 +10,4 @@ class Patient(models.Model):
     date_of_birth = models.DateField()
     
     def __str__(self):
-        return self.user.get_full_name()
+        return f"{self.user.first_name} {self.user.last_name}"
